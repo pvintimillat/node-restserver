@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(require('./routes/usuario'));
 
 
-mongoose.connect(process.env.URLDB, {dbName: 'cafe', useCreateIndex: true})
+mongoose.connect(process.env.URLDB, {dbName: 'cafe', useCreateIndex: true, useNewUrlParser: false})
     .then( () => {
         console.log('Base de datos ONLINE')
     })
